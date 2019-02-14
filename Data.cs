@@ -11,6 +11,7 @@ namespace Statistics_Calculator
         //fields
         private List<int> _datalist = new List<int>();
         private double _mean;
+        private double _standardDeviation;
 
         //constructor
         public Data(List<int> datalist)
