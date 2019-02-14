@@ -1,0 +1,10 @@
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\bin\Debug\Statistics_Calculator.exe.config
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\bin\Debug\Statistics_Calculator.exe
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\bin\Debug\Statistics_Calculator.pdb
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.csprojAssemblyReference.cache
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.Form1.resources
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.Properties.Resources.resources
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.csproj.GenerateResource.cache
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.exe
+C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.pdb
