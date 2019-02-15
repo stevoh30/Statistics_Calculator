@@ -27,6 +27,10 @@ namespace Statistics_Calculator
             {
                 richTxtDataDisplay.AppendText(i.ToString() + "\n");
             }
+            d1.CalculateMean();
+            d1.CalculateSD();
+            richTxtDataDisplay.AppendText("Mean = " + d1.Mean.ToString() + "\n");
+            richTxtDataDisplay.AppendText("Standard Deviation = " + d1.StandardDeviation.ToString());
         }
 
         public List<int> ReturnList(string list)

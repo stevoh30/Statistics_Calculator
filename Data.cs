@@ -21,13 +21,36 @@ namespace Statistics_Calculator
         //property
         public List<int> Datalist
         {
-            get
-            {
-                return _datalist;
-            }
-        } 
+            get { return _datalist; }
+        }
+        public double Mean
+        {
+            get { return _mean; }
+        }
+        public double StandardDeviation
+        {
+            get { return _standardDeviation; }
+        }
 
         //test methods
+        public void CalculateMean()
+        {
+            double total = 0;
+            foreach(var i in _datalist)
+            {
+                total += i;
+            }
+            _mean = Math.Round(total /_datalist.Count(), 2);     
+        }
+        public void CalculateSD()
+        {
+            double total = 0;
+            foreach (var i in _datalist)
+            {
+                total += Math.Pow(i - _mean, 2);
+            }
+            _standardDeviation = Math.Round(Math.Sqrt(total / (_datalist.Count()-1)),2);
+        }
         
     }
 }

@@ -8,3 +8,13 @@ C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debu
 C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.csproj.CoreCompileInputs.cache
 C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.exe
 C:\Users\Stev-\source\repos\Statistics_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.pdb
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\bin\Debug\Statistics_Calculator.exe.config
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\bin\Debug\Statistics_Calculator.exe
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\bin\Debug\Statistics_Calculator.pdb
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.csprojAssemblyReference.cache
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.Form1.resources
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.Properties.Resources.resources
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.csproj.GenerateResource.cache
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.csproj.CoreCompileInputs.cache
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.exe
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.pdb
