@@ -9,19 +9,26 @@ namespace Statistics_Calculator
     public class Data
     {
         //fields
-        private List<int> _datalist = new List<int>();
+        private List<double> _datalist = new List<double>();
         private double _mean;
         private double _standardDeviation;
 
-        //constructor
-        public Data(List<int> datalist)
+        //constructors
+        public Data()
+        {
+            //default list to avoid nullException error when 
+            //class object is global
+            _datalist = new List<double>(new double[10]);
+        }
+        public Data(List<double> datalist)
         {
             _datalist = datalist;
         }
-        //property
-        public List<int> Datalist
+        //properties
+        public List<double> Datalist
         {
             get { return _datalist; }
+            set { _datalist = value; }
         }
         public double Mean
         {
@@ -32,7 +39,12 @@ namespace Statistics_Calculator
             get { return _standardDeviation; }
         }
 
-        //test methods
+        //class methods
+        public void CalculateProperties()
+        {
+            CalculateMean();
+            CalculateSD();
+        }
         public void CalculateMean()
         {
             double total = 0;
@@ -51,6 +63,16 @@ namespace Statistics_Calculator
             }
             _standardDeviation = Math.Round(Math.Sqrt(total / (_datalist.Count()-1)),2);
         }
-        
+        public void RemoveValue(int index)
+        {
+            _datalist.RemoveAt(index);
+        }
+        public void AddValue(int index, double value)
+        {
+            _datalist.Insert(index, value);
+        }
     }
 }
+
+
+// Add multiple lists to select from. 2-3 different lists?

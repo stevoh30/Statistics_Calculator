@@ -12,42 +12,81 @@ namespace Statistics_Calculator
 {
     public partial class Form1 : Form
     {
+        // need to fix this global class
+        Data data = new Data();
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        // Button creates a list of data
         private void btnCreateList_Click(object sender, EventArgs e)
         {
-            // Button creates a list of data
             string list = richTxtData.Text;
-            Data d1 = new Data(ReturnList(list));
-
-            foreach (int i in d1.Datalist)
-            {
-                richTxtDataDisplay.AppendText(i.ToString() + "\n");
-            }
-            d1.CalculateMean();
-            d1.CalculateSD();
-            richTxtDataDisplay.AppendText("Mean = " + d1.Mean.ToString() + "\n");
-            richTxtDataDisplay.AppendText("Standard Deviation = " + d1.StandardDeviation.ToString());
+            data.Datalist = (ReturnList(list));
+            richTxtData.Clear();
+            tabControl.SelectedTab = tabPage2;
+            DisplayValues(data);     
         }
 
-        public List<int> ReturnList(string list)
+        // Method parses the data string into a list
+        public List<double> ReturnList(string list)
         {
-            // Parses the data string into a list
             string[] l1 = list.Split(' ');
-            List<int> data = new List<int>();
+            List<double> data = new List<double>();
             for(int i = 0; i <= l1.Length-1; i++)
             {
-                data.Add(int.Parse(l1[i]));
+                data.Add(double.Parse(l1[i]));
             }
             return data;
         }
 
-        private void btnDisplayList_Click(object sender, EventArgs e)
+        // Button adds user value into selected index
+        private void btnAddValue_Click(object sender, EventArgs e)
         {
+            AddValue(data);
+        }
+        public void AddValue(Data data)
+        {
+            double value = Convert.ToDouble(txtAddValue.Text);
+            data.AddValue(listBox.SelectedIndex, value);
+            DisplayValues(data);
+        }
 
+        // Method displays values in list of Data class object
+        public void DisplayValues(Data data)
+        {
+            listBox.Items.Clear();
+            foreach (double i in data.Datalist)
+            {
+                listBox.Items.Add(i);
+            }
+        }
+
+        // Button displays properties of list in Data class object
+        private void btnDispAvg_Click(object sender, EventArgs e)
+        {
+            DisplayProperties(data);
+        }
+        public void DisplayProperties(Data data)
+        {
+            richTxtDataDisplay.Clear();
+            data.CalculateProperties();
+            richTxtDataDisplay.AppendText("Mean = " + data.Mean.ToString() + "\n");
+            richTxtDataDisplay.AppendText("Standard Deviation = " + data.StandardDeviation.ToString());
+        }
+
+        // Remove value from selected index of Data object
+        private void btnRemoveValue_Click(object sender, EventArgs e)
+        {
+            RemoveValue(data);
+        }
+        private void RemoveValue(Data data)
+        {
+            int index = listBox.SelectedIndex;
+            data.RemoveValue(index);
+            DisplayValues(data);
         }
     }
 }
