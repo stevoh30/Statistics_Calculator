@@ -18,7 +18,7 @@ namespace Statistics_Calculator
         {
             //default list to avoid nullException error when 
             //class object is global
-            _datalist = new List<double>(new double[10]);
+            _datalist = new List<double>(new double[0]);
         }
         public Data(List<double> datalist)
         {
