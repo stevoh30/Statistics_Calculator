@@ -11,7 +11,7 @@ namespace Statistics_Calculator
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
+        [STAThread] //making changes and merge thru git hub
         static void Main()
         {
             Application.EnableVisualStyles();
