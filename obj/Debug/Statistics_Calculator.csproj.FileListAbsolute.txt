@@ -18,3 +18,4 @@ D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calcul
 D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.csproj.CoreCompileInputs.cache
 D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.exe
 D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.pdb
+D:\Computer Science Courses\Side-Projects\Statistic_Calculator\Statistics_Calculator\obj\Debug\Statistics_Calculator.Form2.resources

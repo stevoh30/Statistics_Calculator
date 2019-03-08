@@ -24,23 +24,42 @@ namespace Statistics_Calculator
         // Button creates a list of data
         private void btnCreateList_Click(object sender, EventArgs e)
         {
+            //error message if data already exists within a list based off
+            //radio button selection.
             try{
                 string list = richTxtData.Text;
                 if (radioBtnCList1.Checked == true)
                 {
-                    data.Datalist = (ReturnList(list));
-                    DisplayValues(data);
+                    if(data.Datalist.Count > 0)
+                    {
+                        DialogResult result = MessageBox.Show("There is already a List 1, do you wish to overwrite?", 
+                            "List 1 already exists!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                            data.Datalist = (ReturnList(list));
+                    }
+                    else
+                        data.Datalist = (ReturnList(list));
                 }
                 else if(radioBtnCList2.Checked == true)
                 {
-                    data2.Datalist = (ReturnList(list));
-                    DisplayValues(data2);
+                    if (data2.Datalist.Count > 0)
+                    {
+                        DialogResult result = MessageBox.Show("There is already a List 2, do you witsh to overwrite?", 
+                            "List 2 already exists!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                            data2.Datalist = (ReturnList(list));
+                    }
+                    else
+                        data2.Datalist = (ReturnList(list));
                 }
+                //Switched selected tab and displays data values of lists
+                DisplayValues(data);
+                DisplayValues(data2);
                 tabControl.SelectedTab = tabPage2;
                 richTxtData.Clear();
             }
             catch{
-                MessageBox.Show("No data to create list!");
+                MessageBox.Show("There is either no data or an unneeded space within the data present.");
             }
         }
 
@@ -59,10 +78,15 @@ namespace Statistics_Calculator
         // Button adds user value into selected index
         private void btnAddValue_Click(object sender, EventArgs e)
         {
-            if(radioBtnSelect1.Checked == true)
-                AddValue(data);
-            else if(radioBtnSelect2.Checked==true)
-                AddValue(data2);
+            try{
+                if (radioBtnSelect1.Checked == true)
+                    AddValue(data);
+                else if (radioBtnSelect2.Checked == true)
+                    AddValue(data2);
+            }
+            catch(Exception ex){
+                MessageBox.Show(ex.Message);
+            }
         }
         public void AddValue(Data d)
         {
@@ -77,21 +101,15 @@ namespace Statistics_Calculator
         // Method displays values in list of Data class object
         public void DisplayValues(Data d)
         {
-            if (d == data)
-            {
+            if (d == data){
                 listBox1.Items.Clear();
                 foreach (double i in d.Datalist)
-                {
                     listBox1.Items.Add(i);
-                }
             }
-            else if(d == data2)
-            {
+            else if(d == data2){
                 listBox2.Items.Clear();
                 foreach (double i in d.Datalist)
-                {
                     listBox2.Items.Add(i);
-                }
             }
         }
 
@@ -108,25 +126,31 @@ namespace Statistics_Calculator
             richTxtDataDisplay.Clear();
             data.CalculateProperties();
             richTxtDataDisplay.AppendText("Mean = " + data.Mean.ToString() + "\n");
-            richTxtDataDisplay.AppendText("Standard Deviation = " + data.StandardDeviation.ToString());
+            richTxtDataDisplay.AppendText("Standard Deviation = " + data.StandardDeviation.ToString() + "\n");
+            richTxtDataDisplay.AppendText("1st Quartile = " + data.Quartile1.ToString() + "\n");
+            richTxtDataDisplay.AppendText("Average = " + data.Average.ToString() + "\n");
+            //richTxtDataDisplay.AppendText("3rd Quartile = " + data.Quartile3.ToString() + "\n");
         }
 
         // Remove value from selected index of Data object
         private void btnRemoveValue_Click(object sender, EventArgs e)
         {
-            RemoveValue(data);
+            try{
+                if (radioBtnSelect1.Checked == true)
+                    RemoveValue(data, listBox1.SelectedIndex);
+                else if (radioBtnSelect2.Checked == true)
+                    RemoveValue(data2, listBox2.SelectedIndex);
+            }
+            catch(Exception ex){
+                MessageBox.Show(ex.Message);
+            }
         }
-        private void RemoveValue(Data data)
+        private void RemoveValue(Data data, int index)
         {
-            int index = listBox1.SelectedIndex;
             data.RemoveValue(index);
             DisplayValues(data);
         }
     }
 }
 
-
-//Fix the add values method to target specific list based off selection
-//Add functionality to remove value button (same as add value)
-//Display list properties based on selected list radio button
-//Add functionality to delete button
+//add functionality to delete list button

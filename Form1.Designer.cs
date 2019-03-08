@@ -105,13 +105,13 @@
             this.radioBtnDisplay2.Name = "radioBtnDisplay2";
             this.radioBtnDisplay2.Size = new System.Drawing.Size(50, 17);
             this.radioBtnDisplay2.TabIndex = 1;
-            this.radioBtnDisplay2.TabStop = true;
             this.radioBtnDisplay2.Text = "List 2";
             this.radioBtnDisplay2.UseVisualStyleBackColor = true;
             // 
             // radioBtnDisplay1
             // 
             this.radioBtnDisplay1.AutoSize = true;
+            this.radioBtnDisplay1.Checked = true;
             this.radioBtnDisplay1.Location = new System.Drawing.Point(30, 19);
             this.radioBtnDisplay1.Name = "radioBtnDisplay1";
             this.radioBtnDisplay1.Size = new System.Drawing.Size(50, 17);
@@ -197,13 +197,13 @@
             this.radioBtnCList2.Name = "radioBtnCList2";
             this.radioBtnCList2.Size = new System.Drawing.Size(50, 17);
             this.radioBtnCList2.TabIndex = 5;
-            this.radioBtnCList2.TabStop = true;
             this.radioBtnCList2.Text = "List 2";
             this.radioBtnCList2.UseVisualStyleBackColor = true;
             // 
             // radioBtnCList1
             // 
             this.radioBtnCList1.AutoSize = true;
+            this.radioBtnCList1.Checked = true;
             this.radioBtnCList1.Location = new System.Drawing.Point(49, 17);
             this.radioBtnCList1.Name = "radioBtnCList1";
             this.radioBtnCList1.Size = new System.Drawing.Size(50, 17);
@@ -270,18 +270,18 @@
             // radioBtnSelect2
             // 
             this.radioBtnSelect2.AutoSize = true;
-            this.radioBtnSelect2.Location = new System.Drawing.Point(158, 19);
+            this.radioBtnSelect2.Location = new System.Drawing.Point(122, 19);
             this.radioBtnSelect2.Name = "radioBtnSelect2";
             this.radioBtnSelect2.Size = new System.Drawing.Size(50, 17);
             this.radioBtnSelect2.TabIndex = 1;
-            this.radioBtnSelect2.TabStop = true;
             this.radioBtnSelect2.Text = "List 2";
             this.radioBtnSelect2.UseVisualStyleBackColor = true;
             // 
             // radioBtnSelect1
             // 
             this.radioBtnSelect1.AutoSize = true;
-            this.radioBtnSelect1.Location = new System.Drawing.Point(34, 19);
+            this.radioBtnSelect1.Checked = true;
+            this.radioBtnSelect1.Location = new System.Drawing.Point(66, 18);
             this.radioBtnSelect1.Name = "radioBtnSelect1";
             this.radioBtnSelect1.Size = new System.Drawing.Size(50, 17);
             this.radioBtnSelect1.TabIndex = 0;
@@ -336,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 474);
+            this.ClientSize = new System.Drawing.Size(511, 474);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.panel2);
             this.Name = "Form1";
